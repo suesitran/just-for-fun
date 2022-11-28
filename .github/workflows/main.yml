@@ -7,7 +7,7 @@ on:
 jobs:
   auto_commit:
     name: 'Auto push a commit to my repo'
-    runs-on: linux-latest
+    runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
     - name: Create sample file with just timestamp
