@@ -1,0 +1,20 @@
+name: Auto commit
+
+on:
+  schedule:
+    - cron: '15 * * * *'
+
+jobs:
+  auto_commit:
+    name: 'Auto push a commit to my repo'
+    runs-on: linux-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Create sample file with just timestamp
+      run: date +%s >> report.txt
+    - name: Commit file
+      run: |
+          git config --global user.name 'Automated Suesi 404'
+          git config --global user.email 'suesitran@users.noreply.github.com'
+          git commit -am "Automated report"
+          git push
