@@ -2,7 +2,7 @@ name: Auto commit
 
 on:
   schedule:
-    - cron: '15 * * 8-18 *'
+    - cron: '15 4,8,15 * * 0-2'
     - cron: '0 8-20 * * 1-5'
     - cron: '10 3-11 4-20 * *'
 
